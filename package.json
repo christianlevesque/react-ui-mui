@@ -1,0 +1,53 @@
+{
+	"name": "@sienar/react-ui-mui",
+	"version": "0.1.0",
+	"description": "A React UI library based on MUI for use with Sienar plugins",
+	"type": "module",
+	"main": "dist/sienar-react-ui-mui.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"/dist",
+		"/LICENSE.txt",
+		"/README.md"
+	],
+	"scripts": {
+		"build": "tsc -b && vite build"
+	},
+	"devDependencies": {
+		"@emotion/react": "11.13.3",
+		"@emotion/styled": "11.13.0",
+		"@mui/icons-material": "6.1.1",
+		"@mui/material": "6.1.1",
+		"@mui/types": "7.2.18",
+		"@mui/x-data-grid": "7.22.1",
+		"@mui/x-date-pickers": "7.22.1",
+		"@sienar/react-utils": "0.1.2",
+		"@types/node": "22.5.5",
+		"@types/react": "18.3.1",
+		"@types/react-dom": "18.3.1",
+		"@vitejs/plugin-react": "4.3.1",
+		"dayjs": "1.11.13",
+		"notistack": "3.0.1",
+		"react": "18.3.1",
+		"react-dom": "18.3.1",
+		"react-router-dom": "6.26.2",
+		"typescript": "5.5.3",
+		"vite": "5.4.1",
+		"vite-plugin-dts": "4.3.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sienar-cms/react-ui-mui.git"
+	},
+	"keywords": [
+		"CMS",
+		"Sienar",
+		"React"
+	],
+	"author": "Christian LeVesque <christian@levesque.dev> (https://levesque.dev)",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/sienar-cms/react-ui-mui/issues"
+	},
+	"homepage": "https://sienar.io"
+}
