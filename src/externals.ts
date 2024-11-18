@@ -5,6 +5,7 @@ export const viteExternals = [
 	/@mui\/material/,
 	/@mui\/x-data-grid/,
 	/@mui\/x-date-pickers/,
+	/@sienar\/react-utils/,
 	'dayjs',
 	'notistack'
 ];
