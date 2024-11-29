@@ -25,11 +25,14 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: {
-				'sienar-react-ui-mui': './src/index.ts'
+				'index': './src/index.ts'
 			},
 			formats: [ 'es' ]
 		},
 		rollupOptions: { external }
+	},
+	esbuild: {
+		minifyIdentifiers: false
 	},
 	plugins: [
 		react(),
@@ -42,8 +45,5 @@ export default defineConfig({
 		alias: {
 			'@': resolve(__dirname, './src')
 		}
-	},
-	define: {
-		'process.env.NODE_ENV': '"production"'
 	}
 });
