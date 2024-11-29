@@ -3,7 +3,7 @@
 	"version": "0.1.2",
 	"description": "A React UI library based on MUI for use with Sienar plugins",
 	"type": "module",
-	"main": "dist/sienar-react-ui-mui.js",
+	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
 		"/dist",
