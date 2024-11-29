@@ -25,7 +25,7 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: {
-				'sienar-react-ui-mui': './src/index.ts'
+				'index': './src/index.ts'
 			},
 			formats: [ 'es' ]
 		},
