@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import { CheckBox, CheckBoxOutlineBlank } from '@mui/icons-material';
-import { Color } from '@/theme.ts';
+import { MuiColor } from '@/theme.ts';
 
 export type TableBooleanCellProps = {
 	/**
@@ -11,7 +11,7 @@ export type TableBooleanCellProps = {
 	/**
 	 * The color to render with. If not set, the render color will be dark gray
 	 */
-	color?: Color
+	color?: MuiColor
 
 	/**
 	 * Whether to center

@@ -2,7 +2,7 @@ import { Button, Dialog, Typography } from '@mui/material';
 import Card from './Card.tsx';
 
 import type { CardProps } from './Card.tsx';
-import type { Color } from './theme.ts';
+import type { MuiColor } from './theme.ts';
 
 export type ConfirmationDialogSlots = {
 	card?: Omit<CardProps, 'title'|'color'|'actions'>
@@ -45,9 +45,9 @@ export type ConfirmationDialogProps = {
 	onCancel: () => any
 
 	/**
-	 * The {@link Color} of the modal
+	 * The {@link MuiColor} of the modal
 	 */
-	color?: Color
+	color?: MuiColor
 
 	/**
 	 * Additional props to pass to nested components

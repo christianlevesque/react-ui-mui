@@ -12,7 +12,7 @@ import IconButtonLink from '@/links/IconButtonLink.tsx';
 import type { ForwardedRef, ForwardRefRenderFunction, ReactNode } from 'react';
 import type { GridColDef, GridRenderCellParams, GridSortModel } from '@mui/x-data-grid';
 import type { CrudService, EntityBase, Filter, InjectionKey } from '@sienar/react-utils';
-import type { Color } from '@/theme.ts';
+import type { MuiColor } from '@/theme.ts';
 
 export type TableProps<T extends EntityBase> = {
 	/**
@@ -40,7 +40,7 @@ export type TableProps<T extends EntityBase> = {
 	/**
 	 * The color of the table header and controls
 	 */
-	color?: Color
+	color?: MuiColor
 
 	/**
 	 * Whether to hide the search bar at the top of the table

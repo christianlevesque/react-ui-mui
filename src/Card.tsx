@@ -1,7 +1,7 @@
 ﻿import type { ElementType, PropsWithChildren, ReactNode } from 'react';
 import { Box, Card as MaterialCard, CardActions, CardContent, Typography } from '@mui/material';
 
-import type { Color } from '@/theme.ts';
+import type { MuiColor } from '@/theme.ts';
 
 export type CardProps = PropsWithChildren & {
 	title: string
@@ -11,7 +11,7 @@ export type CardProps = PropsWithChildren & {
 	subtitleTypography?: string
 	subtitleComponent?: ElementType
 	headerIcon?: ReactNode
-	color?: Color
+	color?: MuiColor
 	headerBackgroundColor?: string
 	headerTextColor?: string
 	actions?: ReactNode
@@ -91,7 +91,7 @@ export default function Card(props: CardProps) {
 
 function mapThemeBackground(
 	explicitColor: string|undefined,
-	color: Color|undefined
+	color: MuiColor|undefined
 ): string {
 	if (explicitColor) return explicitColor;
 	if (color === undefined || color === 'inherit') return 'inherit';
@@ -100,7 +100,7 @@ function mapThemeBackground(
 
 function mapThemeForeground(
 	explicitColor: string|undefined,
-	color: Color|undefined
+	color: MuiColor|undefined
 ): string {
 	if (explicitColor) return explicitColor;
 	if (color === undefined) return 'text.primary';

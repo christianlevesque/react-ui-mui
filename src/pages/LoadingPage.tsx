@@ -2,13 +2,13 @@ import { Box, CircularProgress, Typography } from '@mui/material';
 
 import type { ElementType, PropsWithChildren } from 'react';
 import type { SxProps } from '@mui/material';
-import type { Color } from '@/theme.ts';
+import type { MuiColor } from '@/theme.ts';
 
 export type LoadingPageProps = PropsWithChildren & {
 	messageComponent?: ElementType
 	messageTypography?: string
 	messageSx?: SxProps
-	color?: Color
+	color?: MuiColor
 }
 
 export default function LoadingPage(props: LoadingPageProps) {

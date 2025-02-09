@@ -1,11 +1,11 @@
 import { FormControl, FormControlLabel, Switch as MaterialSwitch } from '@mui/material';
 
 import type { ChangeEvent, PropsWithChildren } from 'react';
-import type { Color } from '@/theme.ts';
+import type { MuiColor } from '@/theme.ts';
 
 export type SwitchProps = PropsWithChildren & {
 	checked: boolean
-	color?: Color
+	color?: MuiColor
 	onActivated: () => any
 	onDeactivated: () => any
 }
