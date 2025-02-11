@@ -29,4 +29,13 @@ export type Color =
 	| 'current'
 	| 'inherit';
 
+/**
+ * Bulma sizes for use by themeable components
+ */
+export type Size =
+	| 'small'
+	| 'normal'
+	| 'medium'
+	| 'large';
+
 export type ExtensibleColor<T> = OverridableStringUnion<MuiColor, T>;
