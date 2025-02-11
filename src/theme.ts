@@ -3,6 +3,13 @@ import type { OverridableStringUnion } from '@mui/types';
 export type MuiColor = 'inherit' | 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error';
 
 /**
+ * Themeable component props
+ */
+export type Themeable = {
+	color?: Color
+}
+
+/**
  * Bulma theme colors for use by themeable components
  */
 export type Color =
