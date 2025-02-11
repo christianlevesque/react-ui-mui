@@ -11,6 +11,8 @@ export * from '@/DefaultPropsProvider.tsx';
 export { default as DefaultPropsProvider } from '@/DefaultPropsProvider.tsx';
 export type * from '@/drawers/index.ts';
 export * from '@/drawers/index.ts';
+export type * from '@/Element.tsx';
+export { default as Element } from '@/Element.tsx';
 export type * from '@/forms/index.ts';
 export * from '@/forms/index.ts';
 export type * from './layouts/index.tsx';
