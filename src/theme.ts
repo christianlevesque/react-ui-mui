@@ -6,7 +6,10 @@ export type MuiColor = 'inherit' | 'primary' | 'secondary' | 'success' | 'info' 
  * Themeable component props
  */
 export type Themeable = {
-	color?: Color
+	/**
+	 * The Bulma display settings for the component
+	 */
+	display?: Partial<Record<Display, Breakpoint>>
 }
 
 /**
@@ -37,5 +40,32 @@ export type Size =
 	| 'normal'
 	| 'medium'
 	| 'large';
+
+/**
+ * Bulma display utilities
+ */
+export type Display =
+	| 'block'
+	| 'flex'
+	| 'inline'
+	| 'inline-block'
+	| 'inline-flex'
+	| 'hidden'
+	| 'invisible';
+
+/**
+ * Bulma breakpoints
+ */
+export type Breakpoint =
+	| true
+	| 'mobile'
+	| 'touch'
+	| 'tablet'
+	| 'tablet-only'
+	| 'desktop'
+	| 'desktop-only'
+	| 'widescreen'
+	| 'widescreen-only'
+	| 'fullhd';
 
 export type ExtensibleColor<T> = OverridableStringUnion<MuiColor, T>;

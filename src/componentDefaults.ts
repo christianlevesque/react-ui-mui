@@ -1,5 +1,5 @@
 ﻿import { createContext, useContext } from 'react';
-import type { Themeable } from '@/theme.ts';
+import type { Color, Themeable } from '@/theme.ts';
 
 /**
  * A context providing default component prop values
@@ -14,7 +14,9 @@ export const useDefaultPropsContext = () => useContext(defaultPropsContext);
 /**
  * Button theme default props
  */
-export type ButtonDefaults = Themeable;
+export type ButtonDefaults = {
+	color?: Color;
+} & Themeable;
 
 /**
  * Theme default props for all components
