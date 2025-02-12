@@ -1,6 +1,6 @@
 ﻿import type { ElementType, ComponentPropsWithRef, ReactNode } from 'react';
 import { classNames } from '@sienar/react-utils';
-import type { Breakpoint, Display, Themeable } from '@/theme.ts';
+import type { Breakpoint, Themeable } from '@/theme.ts';
 
 /**
  * The props for an <code>&lt;HtmlElement&gt;</code>
@@ -20,34 +20,42 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		tag: Tag,
 		children,
 		className,
-		display,
+		block,
+		flex,
+		inline,
+		inlineBlock,
+		inlineFlex,
+		hidden,
+		invisible,
 		srOnly,
 		...otherProps
 	} = props;
 
 	const classes = classNames(
 		{
+			...getBreakpointable('is-block', block),
+			...getBreakpointable('is-flex', flex),
+			...getBreakpointable('is-inline', inline),
+			...getBreakpointable('is-inline-block', inlineBlock),
+			...getBreakpointable('is-inline-flex', inlineFlex),
+			...getBreakpointable('is-hidden', hidden),
+			...getBreakpointable('is-invisible', invisible),
 			'is-sr-only': srOnly
 		},
-		className,
-		...getDisplay(display)
+		className
 	);
 
-	return <Tag className={classes} children={children} {...otherProps as any}/>;
+	return (
+		<Tag
+			className={classes}
+			children={children}
+			{...otherProps as any}
+		/>
+	);
 }
 
-function getDisplay(display: Partial<Record<Display, Breakpoint>>|undefined): string[] {
-	if (!display) return [];
+function getBreakpointable(className: string, breakpoint: Breakpoint|undefined): Record<string, boolean> {
+	if (breakpoint === true) return { [className]: true };
 
-	const result: string[] = [];
-
-	for (let key in display) {
-		const value = display[key as Display];
-		const displayClass = typeof value === 'string'
-			? `is-${key}-${value}`
-			: `is-${key}`;
-		result.push(displayClass);
-	}
-
-	return result;
+	return { [`${className}-${breakpoint}`]: !!breakpoint };
 }

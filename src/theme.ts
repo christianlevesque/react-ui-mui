@@ -7,9 +7,39 @@ export type MuiColor = 'inherit' | 'primary' | 'secondary' | 'success' | 'info' 
  */
 export type Themeable = {
 	/**
-	 * The Bulma display settings for the component
+	 * The breakpoint at which the component should be rendered as <code>display:block</code>
 	 */
-	display?: Partial<Record<Display, Breakpoint>>;
+	block?: Breakpoint;
+
+	/**
+	 * The breakpoint at which the component should be rendered as <code>display:flex</code>
+	 */
+	flex?: Breakpoint;
+
+	/**
+	 * The breakpoint at which the component should be rendered as <code>display:inline</code>
+	 */
+	inline?: Breakpoint;
+
+	/**
+	 * The breakpoint at which the component should be rendered as <code>display:inline-block</code>
+	 */
+	inlineBlock?: Breakpoint;
+
+	/**
+	 * The breakpoint at which the component should be rendered as <code>display:inline-flex</code>
+	 */
+	inlineFlex?: Breakpoint;
+
+	/**
+	 * The breakpoint at which the component should be rendered as <code>display:none</code>
+	 */
+	hidden?: Breakpoint;
+
+	/**
+	 * The breakpoint at which the component should be rendered as <code>visibility:hidden</code>
+	 */
+	invisible?: Breakpoint;
 
 	/**
 	 * Whether the component should be rendered as screenreader-only content
@@ -45,18 +75,6 @@ export type Size =
 	| 'normal'
 	| 'medium'
 	| 'large';
-
-/**
- * Bulma display utilities
- */
-export type Display =
-	| 'block'
-	| 'flex'
-	| 'inline'
-	| 'inline-block'
-	| 'inline-flex'
-	| 'hidden'
-	| 'invisible';
 
 /**
  * Bulma breakpoints
