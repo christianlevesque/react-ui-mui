@@ -9,7 +9,12 @@ export type Themeable = {
 	/**
 	 * The Bulma display settings for the component
 	 */
-	display?: Partial<Record<Display, Breakpoint>>
+	display?: Partial<Record<Display, Breakpoint>>;
+
+	/**
+	 * Whether the component should be rendered as screenreader-only content
+	 */
+	srOnly?: boolean
 }
 
 /**

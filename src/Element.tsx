@@ -24,6 +24,9 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 	} = props;
 
 	const classes = classNames(
+		{
+			'is-sr-only': props.srOnly
+		},
 		className,
 		...getDisplay(props)
 	);
