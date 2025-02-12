@@ -7,6 +7,16 @@ export type MuiColor = 'inherit' | 'primary' | 'secondary' | 'success' | 'info' 
  */
 export type Themeable = {
 	/**
+	 * The theme color of the text
+	 */
+	textColor?: Color;
+
+	/**
+	 * The color variant of the text
+	 */
+	textColorVariant?: ColorVariant;
+
+	/**
 	 * The breakpoint at which the component should be rendered as <code>display:block</code>
 	 */
 	block?: Breakpoint;
@@ -44,8 +54,8 @@ export type Themeable = {
 	/**
 	 * Whether the component should be rendered as screenreader-only content
 	 */
-	srOnly?: boolean
-}
+	srOnly?: boolean;
+};
 
 /**
  * Bulma theme colors for use by themeable components
@@ -64,8 +74,44 @@ export type Color =
 	| 'light'
 	| 'black'
 	| 'dark'
+	| 'grey'
 	| 'current'
 	| 'inherit';
+
+/**
+ * Bulma theme color variants
+ */
+export type ColorVariant =
+	| '00'
+	| '05'
+	| '10'
+	| '15'
+	| '20'
+	| '25'
+	| '30'
+	| '35'
+	| '40'
+	| '45'
+	| '50'
+	| '55'
+	| '60'
+	| '65'
+	| '70'
+	| '75'
+	| '80'
+	| '85'
+	| '90'
+	| '95'
+	| '100'
+	| 'light'
+	| 'lighter'
+	| 'dark'
+	| 'darker'
+	| 'bis'
+	| 'ter'
+	| 'soft'
+	| 'bold'
+	| 'on-scheme';
 
 /**
  * Bulma sizes for use by themeable components
