@@ -24,6 +24,8 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		// Colors
 		textColor,
 		textColorVariant,
+		backgroundColor,
+		backgroundColorVariant,
 
 		// Display
 		block,
@@ -42,6 +44,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		{
 			// Colors
 			...getColorWithVariant('has-text', textColor, textColorVariant),
+			...getColorWithVariant('has-background', backgroundColor, backgroundColorVariant),
 
 			// Display
 			...getBreakpointable('is-block', block),

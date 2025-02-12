@@ -17,6 +17,16 @@ export type Themeable = {
 	textColorVariant?: ColorVariant;
 
 	/**
+	 * The theme color of the text
+	 */
+	backgroundColor?: Color;
+
+	/**
+	 * The color variant of the text
+	 */
+	backgroundColorVariant?: ColorVariant;
+
+	/**
 	 * The breakpoint at which the component should be rendered as <code>display:block</code>
 	 */
 	block?: Breakpoint;
