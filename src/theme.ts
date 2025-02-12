@@ -165,6 +165,41 @@ export type Themeable = {
 	 * The breakpoint at which test should be right-aligned
 	 */
 	textRight?: Breakpoint;
+
+	/**
+	 * The breakpoint at which text should be size 1
+	 */
+	size1?: Breakpoint;
+
+	/**
+	 * The breakpoint at which text should be size 2
+	 */
+	size2?: Breakpoint;
+
+	/**
+	 * The breakpoint at which text should be size 3
+	 */
+	size3?: Breakpoint;
+
+	/**
+	 * The breakpoint at which text should be size 4
+	 */
+	size4?: Breakpoint;
+
+	/**
+	 * The breakpoint at which text should be size 5
+	 */
+	size5?: Breakpoint;
+
+	/**
+	 * The breakpoint at which text should be size 6
+	 */
+	size6?: Breakpoint;
+
+	/**
+	 * The breakpoint at which text should be size 7
+	 */
+	size7?: Breakpoint;
 };
 
 /**

@@ -58,6 +58,13 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		textJustified,
 		textLeft,
 		textRight,
+		size1,
+		size2,
+		size3,
+		size4,
+		size5,
+		size6,
+		size7,
 
 		...otherProps
 	} = props;
@@ -108,7 +115,14 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			...getBreakpointable('has-text-centered', textCentered),
 			...getBreakpointable('has-text-justified', textJustified),
 			...getBreakpointable('has-text-left', textLeft),
-			...getBreakpointable('has-text-right', textRight)
+			...getBreakpointable('has-text-right', textRight),
+			...getBreakpointable('is-size-1', size1),
+			...getBreakpointable('is-size-2', size2),
+			...getBreakpointable('is-size-3', size3),
+			...getBreakpointable('is-size-4', size4),
+			...getBreakpointable('is-size-5', size5),
+			...getBreakpointable('is-size-6', size6),
+			...getBreakpointable('is-size-7', size7)
 		},
 		className
 	);
