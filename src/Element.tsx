@@ -53,6 +53,12 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		pb,
 		pl,
 
+		// Text
+		textCentered,
+		textJustified,
+		textLeft,
+		textRight,
+
 		...otherProps
 	} = props;
 
@@ -97,6 +103,12 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			...getSpacable('pr', pr),
 			...getSpacable('pb', pb),
 			...getSpacable('pl', pl),
+
+			// Text
+			...getBreakpointable('has-text-centered', textCentered),
+			...getBreakpointable('has-text-justified', textJustified),
+			...getBreakpointable('has-text-left', textLeft),
+			...getBreakpointable('has-text-right', textRight)
 		},
 		className
 	);

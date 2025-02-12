@@ -145,6 +145,26 @@ export type Themeable = {
 	 * The padding that should be applied to the left
 	 */
 	pl?: Spacer;
+
+	/**
+	 * The breakpoint at which text should be centered
+	 */
+	textCentered?: Breakpoint;
+
+	/**
+	 * The breakpoint at which text should be justified
+	 */
+	textJustified?: Breakpoint;
+
+	/**
+	 * The breakpoint at which text should be left-aligned
+	 */
+	textLeft?: Breakpoint;
+
+	/**
+	 * The breakpoint at which test should be right-aligned
+	 */
+	textRight?: Breakpoint;
 };
 
 /**
