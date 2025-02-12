@@ -17,6 +17,11 @@ export type Themeable = {
 	textColorVariant?: ColorVariant;
 
 	/**
+	 * Whether the text color should be inverted
+	 */
+	invertText?: boolean
+
+	/**
 	 * The theme color of the text
 	 */
 	backgroundColor?: Color;
@@ -25,6 +30,11 @@ export type Themeable = {
 	 * The color variant of the text
 	 */
 	backgroundColorVariant?: ColorVariant;
+
+	/**
+	 * Whether the background color should be inverted
+	 */
+	invertBackground?: boolean
 
 	/**
 	 * The breakpoint at which the component should be rendered as <code>display:block</code>

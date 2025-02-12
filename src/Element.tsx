@@ -24,8 +24,10 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		// Colors
 		textColor,
 		textColorVariant,
+		invertText,
 		backgroundColor,
 		backgroundColorVariant,
+		invertBackground,
 
 		// Display
 		block,
@@ -43,8 +45,18 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 	const classes = classNames(
 		{
 			// Colors
-			...getColorWithVariant('has-text', textColor, textColorVariant),
-			...getColorWithVariant('has-background', backgroundColor, backgroundColorVariant),
+			...getColorWithVariant(
+				'has-text',
+				textColor,
+				textColorVariant,
+				invertText
+			),
+			...getColorWithVariant(
+				'has-background',
+				backgroundColor,
+				backgroundColorVariant,
+				invertBackground
+			),
 
 			// Display
 			...getBreakpointable('is-block', block),
@@ -71,11 +83,13 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 function getColorWithVariant(
 	className: string,
 	color: Color|undefined,
-	variant: ColorVariant|undefined
+	variant: ColorVariant|undefined,
+	invert: boolean|undefined
 ): Record<string, boolean> {
 	if (!color) return {};
-	const suffix = !!variant ? `-${variant}` : '';
-	return { [`${className}-${color}${suffix}`]: true };
+	const suffixText = !!variant ? `-${variant}` : '';
+	const invertText = invert ? '-invert' : '';
+	return { [`${className}-${color}${suffixText}${invertText}`]: true };
 }
 
 function getBreakpointable(className: string, breakpoint: Breakpoint|undefined): Record<string, boolean> {
