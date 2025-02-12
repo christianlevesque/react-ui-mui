@@ -1,4 +1,4 @@
-﻿import type { ElementType, ComponentPropsWithRef, ReactNode } from 'react';
+﻿import type { ElementType, ComponentPropsWithRef } from 'react';
 import { classNames } from '@sienar/react-utils';
 import type { Breakpoint, Color, ColorVariant, Spacer, Themeable } from '@/theme.ts';
 
@@ -7,7 +7,6 @@ import type { Breakpoint, Color, ColorVariant, Spacer, Themeable } from '@/theme
  */
 export type ElementProps<T extends ElementType> = {
 	tag: T;
-	children?: ReactNode;
 	className?: string;
 	otherProps?: ComponentPropsWithRef<T>;
 } & Themeable;
@@ -18,7 +17,6 @@ export type ElementProps<T extends ElementType> = {
 export default function Element<T extends ElementType>(props: ElementProps<T>) {
 	const {
 		tag: Tag,
-		children,
 		className,
 
 		// Colors
@@ -106,7 +104,6 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 	return (
 		<Tag
 			className={classes}
-			children={children}
 			{...otherProps as any}
 		/>
 	);
