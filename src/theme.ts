@@ -75,6 +75,76 @@ export type Themeable = {
 	 * Whether the component should be rendered as screenreader-only content
 	 */
 	srOnly?: boolean;
+
+	/**
+	 * The margin that should be applied to all sides
+	 */
+	m?: Spacer;
+
+	/**
+	 * The margin that should be applied to the x-axis
+	 */
+	mx?: Spacer;
+
+	/**
+	 * The margin that should be applied to the y-axis
+	 */
+	my?: Spacer;
+
+	/**
+	 * The margin that should be applied to the top
+	 */
+	mt?: Spacer;
+
+	/**
+	 * The margin that should be applied to the right
+	 */
+	mr?: Spacer;
+
+	/**
+	 * The margin that should be applied to the bottom
+	 */
+	mb?: Spacer;
+
+	/**
+	 * The margin that should be applied to the left
+	 */
+	ml?: Spacer;
+
+	/**
+	 * The margin that should be applied to all sides
+	 */
+	p?: Spacer;
+
+	/**
+	 * The padding that should be applied to the x-axis
+	 */
+	px?: Spacer;
+
+	/**
+	 * The padding that should be applied to the y-axis
+	 */
+	py?: Spacer;
+
+	/**
+	 * The padding that should be applied to the top
+	 */
+	pt?: Spacer;
+
+	/**
+	 * The padding that should be applied to the right
+	 */
+	pr?: Spacer;
+
+	/**
+	 * The padding that should be applied to the bottom
+	 */
+	pb?: Spacer;
+
+	/**
+	 * The padding that should be applied to the left
+	 */
+	pl?: Spacer;
 };
 
 /**
@@ -141,6 +211,19 @@ export type Size =
 	| 'normal'
 	| 'medium'
 	| 'large';
+
+/**
+ * Bulma spacing sizes for use by themeable components
+ */
+export type Spacer =
+	| 0
+	| 1
+	| 2
+	| 3
+	| 4
+	| 5
+	| 6
+	| 'auto';
 
 /**
  * Bulma breakpoints

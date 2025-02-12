@@ -1,6 +1,6 @@
 ﻿import type { ElementType, ComponentPropsWithRef, ReactNode } from 'react';
 import { classNames } from '@sienar/react-utils';
-import type { Breakpoint, Color, ColorVariant, Themeable } from '@/theme.ts';
+import type { Breakpoint, Color, ColorVariant, Spacer, Themeable } from '@/theme.ts';
 
 /**
  * The props for an <code>&lt;HtmlElement&gt;</code>
@@ -39,6 +39,22 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		invisible,
 		srOnly,
 
+		// Spacing
+		m,
+		my,
+		mx,
+		mt,
+		mr,
+		mb,
+		ml,
+		p,
+		py,
+		px,
+		pt,
+		pr,
+		pb,
+		pl,
+
 		...otherProps
 	} = props;
 
@@ -66,7 +82,23 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			...getBreakpointable('is-inline-flex', inlineFlex),
 			...getBreakpointable('is-hidden', hidden),
 			...getBreakpointable('is-invisible', invisible),
-			'is-sr-only': srOnly
+			'is-sr-only': srOnly,
+
+			// Spacing
+			...getSpacable('m', m),
+			...getSpacable('my', my),
+			...getSpacable('mx', mx),
+			...getSpacable('mt', mt),
+			...getSpacable('mr', mr),
+			...getSpacable('mb', mb),
+			...getSpacable('ml', ml),
+			...getSpacable('p', p),
+			...getSpacable('py', py),
+			...getSpacable('px', px),
+			...getSpacable('pt', pt),
+			...getSpacable('pr', pr),
+			...getSpacable('pb', pb),
+			...getSpacable('pl', pl),
 		},
 		className
 	);
@@ -96,4 +128,10 @@ function getBreakpointable(className: string, breakpoint: Breakpoint|undefined):
 	if (breakpoint === true) return { [className]: true };
 
 	return { [`${className}-${breakpoint}`]: !!breakpoint };
+}
+
+function getSpacable(className: string, spacer: Spacer|undefined): Record<string, boolean> {
+	if (typeof spacer === 'undefined') return {};
+
+	return { [`${className}-${spacer}`]: true };
 }
