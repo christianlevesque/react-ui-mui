@@ -182,6 +182,11 @@ export type Themeable = {
 	underlined?: boolean;
 
 	/**
+	 * The font weight of the text
+	 */
+	fontWeight?: FontWeight;
+
+	/**
 	 * The breakpoint at which text should be size 1
 	 */
 	size1?: Breakpoint;
@@ -334,6 +339,16 @@ export type CaseTransformation =
 	| 'capitalized'
 	| 'lowercase'
 	| 'uppercase';
+
+/**
+ * Bulma font weight states
+ */
+export type FontWeight =
+	| 'light'
+	| 'normal'
+	| 'medium'
+	| 'semibold'
+	| 'bold';
 
 /**
  * Bulma spacing sizes for use by themeable components
