@@ -92,6 +92,11 @@ export type Themeable = {
 	flexJustify?: FlexJustify;
 
 	/**
+	 * The flex align-content value of the element
+	 */
+	flexAlignContent?: FlexAlignContent;
+
+	/**
 	 * The margin that should be applied to all sides
 	 */
 	m?: Spacer;
@@ -383,6 +388,21 @@ export type FlexJustify =
 	| 'end'
 	| 'left'
 	| 'right';
+
+/**
+ * Bulma flex align-content values
+ */
+export type FlexAlignContent =
+	| 'flex-start'
+	| 'flex-end'
+	| 'center'
+	| 'space-between'
+	| 'space-around'
+	| 'space-evenly'
+	| 'stretch'
+	| 'start'
+	| 'end'
+	| 'baseline';
 
 /**
  * Bulma text case transformation states

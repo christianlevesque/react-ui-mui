@@ -39,6 +39,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		flexDirection,
 		flexWrap,
 		flexJustify,
+		flexAlignContent,
 
 		// Spacing
 		m,
@@ -116,6 +117,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			[`is-flex-direction-${flexDirection}`]: !!flexDirection,
 			[`is-flex-wrap-${flexWrap}`]: !!flexWrap,
 			[`is-flex-justify-${flexJustify}`]: !!flexJustify,
+			[`is-align-content-${flexAlignContent}`]: !!flexAlignContent,
 
 			// Spacing
 			...getSpacable('m', m),
