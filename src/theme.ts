@@ -87,6 +87,11 @@ export type Themeable = {
 	flexWrap?: FlexWrap;
 
 	/**
+	 * The flex justify value of the element
+	 */
+	flexJustify?: FlexJustify;
+
+	/**
 	 * The margin that should be applied to all sides
 	 */
 	m?: Spacer;
@@ -363,6 +368,21 @@ export type FlexWrap =
 	| 'nowrap'
 	| 'wrap'
 	| 'wrap-reverse';
+
+/**
+ * Bulma flex justify values
+ */
+export type FlexJustify =
+	| 'flex-start'
+	| 'flex-end'
+	| 'center'
+	| 'space-between'
+	| 'space-around'
+	| 'space-evenly'
+	| 'start'
+	| 'end'
+	| 'left'
+	| 'right';
 
 /**
  * Bulma text case transformation states

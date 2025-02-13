@@ -38,6 +38,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		srOnly,
 		flexDirection,
 		flexWrap,
+		flexJustify,
 
 		// Spacing
 		m,
@@ -114,6 +115,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			'is-sr-only': srOnly,
 			[`is-flex-direction-${flexDirection}`]: !!flexDirection,
 			[`is-flex-wrap-${flexWrap}`]: !!flexWrap,
+			[`is-flex-justify-${flexJustify}`]: !!flexJustify,
 
 			// Spacing
 			...getSpacable('m', m),
