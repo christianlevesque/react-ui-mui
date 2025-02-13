@@ -116,7 +116,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			'is-sr-only': srOnly,
 			[`is-flex-direction-${flexDirection}`]: !!flexDirection,
 			[`is-flex-wrap-${flexWrap}`]: !!flexWrap,
-			[`is-flex-justify-${flexJustify}`]: !!flexJustify,
+			[`is-justify-${flexJustify}`]: !!flexJustify,
 			[`is-align-content-${flexAlignContent}`]: !!flexAlignContent,
 
 			// Spacing
