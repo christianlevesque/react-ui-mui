@@ -36,6 +36,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		hidden,
 		invisible,
 		srOnly,
+		flexDirection,
 
 		// Spacing
 		m,
@@ -110,6 +111,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			...getBreakpointable('is-hidden', hidden),
 			...getBreakpointable('is-invisible', invisible),
 			'is-sr-only': srOnly,
+			[`is-flex-direction-${flexDirection}`]: !!flexDirection,
 
 			// Spacing
 			...getSpacable('m', m),

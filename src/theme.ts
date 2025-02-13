@@ -77,6 +77,11 @@ export type Themeable = {
 	srOnly?: boolean;
 
 	/**
+	 * The flex direction of the element
+	 */
+	flexDirection?: FlexDirection;
+
+	/**
 	 * The margin that should be applied to all sides
 	 */
 	m?: Spacer;
@@ -336,6 +341,15 @@ export type Size =
 	| 'normal'
 	| 'medium'
 	| 'large';
+
+/**
+ * Bulma flex directions
+ */
+export type FlexDirection =
+	| 'row'
+	| 'row-reverse'
+	| 'column'
+	| 'column-reverse';
 
 /**
  * Bulma text case transformation states
