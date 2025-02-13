@@ -167,6 +167,21 @@ export type Themeable = {
 	textRight?: Breakpoint;
 
 	/**
+	 * The text case transformation to apply
+	 */
+	textTransform?: CaseTransformation;
+
+	/**
+	 * Whether the text should be italicized
+	 */
+	italic?: boolean;
+
+	/**
+	 * Whether the text should be underlined
+	 */
+	underlined?: boolean;
+
+	/**
 	 * The breakpoint at which text should be size 1
 	 */
 	size1?: Breakpoint;
@@ -311,6 +326,14 @@ export type Size =
 	| 'normal'
 	| 'medium'
 	| 'large';
+
+/**
+ * Bulma text case transformation states
+ */
+export type CaseTransformation =
+	| 'capitalized'
+	| 'lowercase'
+	| 'uppercase';
 
 /**
  * Bulma spacing sizes for use by themeable components
