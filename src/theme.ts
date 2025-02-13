@@ -107,6 +107,11 @@ export type Themeable = {
 	flexAlignSelf?: FlexAlignSelf;
 
 	/**
+	 * The flex-grow value of the element
+	 */
+	flexGrow?: FlexGrow;
+
+	/**
 	 * The margin that should be applied to all sides
 	 */
 	m?: Spacer;
@@ -438,6 +443,17 @@ export type FlexAlignSelf =
 	| 'center'
 	| 'baseline'
 	| 'stretch';
+
+/**
+ * Bulma flex-grow values
+ */
+export type FlexGrow =
+	| 0
+	| 1
+	| 2
+	| 3
+	| 4
+	| 5;
 
 /**
  * Bulma text case transformation states
