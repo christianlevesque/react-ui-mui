@@ -187,6 +187,11 @@ export type Themeable = {
 	fontWeight?: FontWeight;
 
 	/**
+	 * The font family of the text
+	 */
+	fontFamily?: FontFamily;
+
+	/**
 	 * The breakpoint at which text should be size 1
 	 */
 	size1?: Breakpoint;
@@ -349,6 +354,16 @@ export type FontWeight =
 	| 'medium'
 	| 'semibold'
 	| 'bold';
+
+/**
+ * Bulma font family states
+ */
+export type FontFamily =
+	| 'sans-serif'
+	| 'monospace'
+	| 'primary'
+	| 'secondary'
+	| 'code';
 
 /**
  * Bulma spacing sizes for use by themeable components
