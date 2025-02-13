@@ -43,6 +43,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		flexAlignItems,
 		flexAlignSelf,
 		flexGrow,
+		flexShrink,
 
 		// Spacing
 		m,
@@ -124,6 +125,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			[`is-align-items-${flexAlignItems}`]: !!flexAlignItems,
 			[`is-align-self-${flexAlignSelf}`]: !!flexAlignSelf,
 			[`is-flex-grow-${flexGrow}`]: flexGrow !== undefined,
+			[`is-flex-shrink-${flexShrink}`]: flexShrink !== undefined,
 
 			// Spacing
 			...getSpacable('m', m),

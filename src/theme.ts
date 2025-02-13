@@ -109,7 +109,12 @@ export type Themeable = {
 	/**
 	 * The flex-grow value of the element
 	 */
-	flexGrow?: FlexGrow;
+	flexGrow?: FlexSize;
+
+	/**
+	 * The flex-shrink value of the element
+	 */
+	flexShrink?: FlexSize;
 
 	/**
 	 * The margin that should be applied to all sides
@@ -447,7 +452,7 @@ export type FlexAlignSelf =
 /**
  * Bulma flex-grow values
  */
-export type FlexGrow =
+export type FlexSize =
 	| 0
 	| 1
 	| 2
