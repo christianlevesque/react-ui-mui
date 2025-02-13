@@ -41,6 +41,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		flexJustify,
 		flexAlignContent,
 		flexAlignItems,
+		flexAlignSelf,
 
 		// Spacing
 		m,
@@ -120,6 +121,7 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			[`is-justify-${flexJustify}`]: !!flexJustify,
 			[`is-align-content-${flexAlignContent}`]: !!flexAlignContent,
 			[`is-align-items-${flexAlignItems}`]: !!flexAlignItems,
+			[`is-align-self-${flexAlignSelf}`]: !!flexAlignSelf,
 
 			// Spacing
 			...getSpacable('m', m),

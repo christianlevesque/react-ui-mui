@@ -102,6 +102,11 @@ export type Themeable = {
 	flexAlignItems?: FlexAlignItems;
 
 	/**
+	 * The flex align-self value of the element
+	 */
+	flexAlignSelf?: FlexAlignSelf;
+
+	/**
 	 * The margin that should be applied to all sides
 	 */
 	m?: Spacer;
@@ -422,6 +427,17 @@ export type FlexAlignItems =
 	| 'end'
 	| 'self-start'
 	| 'self-end';
+
+/**
+ * Bulma flex align-self values
+ */
+export type FlexAlignSelf =
+	| 'auto'
+	| 'flex-start'
+	| 'flex-end'
+	| 'center'
+	| 'baseline'
+	| 'stretch';
 
 /**
  * Bulma text case transformation states
