@@ -82,6 +82,11 @@ export type Themeable = {
 	flexDirection?: FlexDirection;
 
 	/**
+	 * The flex wrap of the element
+	 */
+	flexWrap?: FlexWrap;
+
+	/**
 	 * The margin that should be applied to all sides
 	 */
 	m?: Spacer;
@@ -350,6 +355,14 @@ export type FlexDirection =
 	| 'row-reverse'
 	| 'column'
 	| 'column-reverse';
+
+/**
+ * Bulma flex wrap values
+ */
+export type FlexWrap =
+	| 'nowrap'
+	| 'wrap'
+	| 'wrap-reverse';
 
 /**
  * Bulma text case transformation states
