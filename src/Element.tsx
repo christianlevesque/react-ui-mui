@@ -66,6 +66,17 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 		size6,
 		size7,
 
+		// Other utilities
+		clearfix,
+		pulled,
+		overlay,
+		clipped,
+		radiusless,
+		shadowless,
+		unselectable,
+		clickable,
+		relative,
+
 		...otherProps
 	} = props;
 
@@ -122,7 +133,18 @@ export default function Element<T extends ElementType>(props: ElementProps<T>) {
 			...getBreakpointable('is-size-4', size4),
 			...getBreakpointable('is-size-5', size5),
 			...getBreakpointable('is-size-6', size6),
-			...getBreakpointable('is-size-7', size7)
+			...getBreakpointable('is-size-7', size7),
+
+			// Other utilities
+			'is-clearfix': clearfix,
+			[`is-pulled-${pulled}`]: !!pulled,
+			'is-overlay': overlay,
+			'is-clipped': clipped,
+			'is-radiusless': radiusless,
+			'is-shadowless': shadowless,
+			'is-unselectable': unselectable,
+			'is-clickable': clickable,
+			'is-relative': relative
 		},
 		className
 	);

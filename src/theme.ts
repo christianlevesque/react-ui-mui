@@ -200,6 +200,51 @@ export type Themeable = {
 	 * The breakpoint at which text should be size 7
 	 */
 	size7?: Breakpoint;
+
+	/**
+	 * Applies a clearfix to the element
+	 */
+	clearfix?: boolean;
+
+	/**
+	 * Moves the element to the left or right
+	 */
+	pulled?: PullDirection;
+
+	/**
+	 * Makes the element an overlay over the closest positioned parent
+	 */
+	overlay?: boolean;
+
+	/**
+	 * Applies <code>overflow: hidden</code> to the element
+	 */
+	clipped?: boolean;
+
+	/**
+	 * Removes any radius from the element
+	 */
+	radiusless?: boolean;
+
+	/**
+	 * Removes any shadow from the element
+	 */
+	shadowless?: boolean;
+
+	/**
+	 * Prevents the element from being selected
+	 */
+	unselectable?: boolean;
+
+	/**
+	 * Applies <code>cursor:pointer</code> to the element
+	 */
+	clickable?: boolean;
+
+	/**
+	 * Applies <code>position:relative</code> to the element
+	 */
+	relative?: boolean;
 };
 
 /**
@@ -294,5 +339,10 @@ export type Breakpoint =
 	| 'widescreen'
 	| 'widescreen-only'
 	| 'fullhd';
+
+/**
+ * Bulma is-pulled values
+ */
+export type PullDirection = 'left' | 'right';
 
 export type ExtensibleColor<T> = OverridableStringUnion<MuiColor, T>;
